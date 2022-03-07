@@ -11,7 +11,10 @@
         function App() {
             const [counter, setCounter] = React.useState(0);
             const onClick = () => {
-                setCounter(counter + 1);
+                //setCounter(counter + 1);
+                //가끔 state변경시 내가 원하는 결과값이 나오지 않을때가 있으므로
+                //현재 state를 기반으로 계산을 하고 싶다면, 함수를 사용해서 계산한다.
+                setCounter((current) => current + 1);
             };
             return (
                 <div>
